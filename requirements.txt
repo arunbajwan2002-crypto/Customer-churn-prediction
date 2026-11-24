@@ -1,3 +1,4 @@
 joblib
 streamlit
 lightgbm
+scikit-learn

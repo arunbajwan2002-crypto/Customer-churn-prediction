@@ -66,9 +66,9 @@ y_pred = (y_pred_prob > Customer_threshold).astype(int)
 # graphs plot
 plt.figure(figsize = (12, 5))
 
-fpr, tpr, _ = roc_curve(y_test, y_pred)
+fpr, tpr, _ = roc_curve(y_test, y_pred_prob)
 plt.subplot(1, 2, 2)
-plt.plot(fpr, tpr, color = 'blue', lw = 2, label = (f'roc_auc_score{roc_auc_score(y_test, y_pred):.2f}'))
+plt.plot(fpr, tpr, color = 'blue', lw = 2, label = (f'roc_auc_score{roc_auc_score(y_test, y_pred_prob):.2f}'))
 plt.plot([0, 1], [0, 1], color = 'grey', linestyle = '--')
 plt.xlabel('False Positive Rate')
 plt.ylabel('True Positive Rate')
